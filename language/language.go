@@ -32,6 +32,7 @@ import (
 	"./rust"
 	"./scala"
 	"./swift"
+	"./zsh"
 )
 
 type runFn func([]string, string) (string, string, error)
@@ -68,6 +69,7 @@ var languages = map[string]runFn{
 	"rust":         rust.Run,
 	"scala":        scala.Run,
 	"swift":        swift.Run,
+	"zsh":          zsh.Run,
 }
 
 func IsSupported(lang string) bool {
